@@ -1,4 +1,4 @@
-name: k8s crio test
+name: k8s-crio http server
 
 on:
   workflow_dispatch:
@@ -40,4 +40,4 @@ jobs:
     - name: Run WasmEdge in k8s
       run: |
         cat k8s.log
-        wget -qO- https://raw.githubusercontent.com/second-state/wasmedge-containers-examples/main/kubernetes_crio/simple_wasi_application.sh | bash
+        wget -qO- https://raw.githubusercontent.com/second-state/wasmedge-containers-examples/main/kubernetes_crio/http_server/http_server_application.sh | bash
